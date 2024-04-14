@@ -1,7 +1,9 @@
  # Inventory Management System
-This project is an Inventory Management System that helps businesses track and manage their inventory, orders, suppliers, and customers.
+This project is an Inventory Management System that helps businesses track and manage their inventory, orders, suppliers, and customers. It provides endpoints for adding, updating, and deleting items, as well as querying inventory levels,managing supplier information, and processing orders.
 ## Resources
+
 ### Products
+- Description: Represents a product available in the inventory.
 - Attributes: ID, name, description, quantity, price
 - Relationships: 
   - Belongs to Supplier
@@ -9,17 +11,20 @@ This project is an Inventory Management System that helps businesses track and m
   - Included in Orders
 
 ### Suppliers
-- Attributes: ID, name, phone number
+- Description: Represents a supplier of products
+- Attributes: ID, name, phone number, list of products supplied
 - Relationships:
   - Supplies Products
-  - 
+    
 ### Warehouse
-- Attributes: ID, Name, Address, Capacity
+- Description: Represents a location where products are stored
+- Attributes: ID, name, address, capacity, list of products stored
 - Relationships:
   - Stores Products
 
 ### Orders
-- Attributes: ID, date, status, total cost
+- Description:  Represents a transaction for purchasing or selling products
+- Attributes: ID, date, status (e.g., pending, shipped, delivered), total cost, list of products ordered
 - Relationships:
   - Contains Products
 
@@ -36,10 +41,10 @@ This project is an Inventory Management System that helps businesses track and m
 
 
 ## How to Run the Application
-- Clone this repository to your local machine.
-- Install the required dependencies (e.g., database, web server).
-- Configure the application settings (e.g., database connection).
-- Run the application.
+- Clone this repository in the local machine.
+- Ensure Java and Maven are installed.
+- Configure the application by updating the application.properties or application.yml file with your database connection details and other settings..
+- Run the application in a web browser at http://localhost:8080 or using postman.
 
 ## OpenAPI Specification
 https://app.swaggerhub.com/apis/HALAMONTASER13_1/inventory_management_system/
