@@ -23,13 +23,13 @@ public class wareHouseController {
     }
 
     @GetMapping("")
-    public List<wareHouseDTO> getAllSuppliers() {
+    public List<wareHouseDTO> getAllWareHouses() {
         return wareHouseService.getAllWareHouses();
     }
 
 
     @GetMapping("/{id}")
-    public ResponseEntity<?> getSupplier(@PathVariable int id) {
+    public ResponseEntity<?> getWareHouse(@PathVariable int id) {
         wareHouseDTO wareHouse = wareHouseService.getWareHouseById(id);
         if (wareHouse != null) {
             return ResponseEntity.ok(wareHouse);
@@ -39,17 +39,17 @@ public class wareHouseController {
     }
 
     @PostMapping("")
-    public  wareHouseDTO saveNewSupplier(@Valid @RequestBody wareHouseDTO wareHouseDTO) {
+    public  wareHouseDTO saveNewWareHouse(@Valid @RequestBody wareHouseDTO wareHouseDTO) {
         return wareHouseService.createWareHouse(wareHouseDTO);
     }
 
     @PutMapping("/{id}")
-    public  wareHouseDTO updateSupplier(@PathVariable int id,@RequestBody  wareHouseDTO wareHouseDTO) {
+    public  wareHouseDTO updateWareHouse(@PathVariable int id,@RequestBody  wareHouseDTO wareHouseDTO) {
         return wareHouseService.updateWareHouse(id,wareHouseDTO);
     }
 
     @DeleteMapping("/{id}")
-    public  ResponseEntity<?> deleteSupplier(@PathVariable int id) {
+    public  ResponseEntity<?> deleteWareHouse(@PathVariable int id) {
 
         wareHouseDTO wareHouse = wareHouseService.getWareHouseById(id);
         if(wareHouse!=null){
