@@ -1,0 +1,569 @@
+{
+	"info": {
+		"_postman_id": "a08992c5-6430-4711-b106-787e474fd91c",
+		"name": "Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31334994"
+	},
+	"item": [
+		{
+			"name": "get/product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					]
+				},
+				"description": "Retrieve all products"
+			},
+			"response": []
+		},
+		{
+			"name": "get/product/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/product/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"1"
+					]
+				},
+				"description": "Retrievea specific product by id"
+			},
+			"response": []
+		},
+		{
+			"name": "post/product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n   \"name\":\"Doritos\",\r\n   \"description\":\"ships\",\r\n   \"quantity\":500,\r\n   \"price\":2,\r\n   \"supplier_id\":1,\r\n   \"warehouse_id\":1\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/product",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product"
+					]
+				},
+				"description": "Create product"
+			},
+			"response": []
+		},
+		{
+			"name": "put/product/{id}",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n   \"name\":\"Doritos\",\r\n   \"description\":\"ships\",\r\n   \"quantity\":250,\r\n   \"price\":2,\r\n   \"supplier_id\":1,\r\n   \"warehouse_id\":1\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/product/5",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"5"
+					]
+				},
+				"description": "Update specific product"
+			},
+			"response": []
+		},
+		{
+			"name": "delete/product/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/product/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"2"
+					]
+				},
+				"description": "Delete specific product"
+			},
+			"response": []
+		},
+		{
+			"name": "get/product/supplier/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/product/supplier/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"supplier",
+						"1"
+					]
+				},
+				"description": "Retrieve all products supplied from specific supplier"
+			},
+			"response": []
+		},
+		{
+			"name": "get/product/wareHouse/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/product/wareHouse/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"product",
+						"wareHouse",
+						"1"
+					]
+				},
+				"description": "Retrieve all products stored in specific wareHouse"
+			},
+			"response": []
+		},
+		{
+			"name": "get/supplier",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/supplier",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"supplier"
+					]
+				},
+				"description": "Retrieve all suppliers"
+			},
+			"response": []
+		},
+		{
+			"name": "get/supplier/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/supplier/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"supplier",
+						"1"
+					]
+				},
+				"description": "Retrieve specific supplier"
+			},
+			"response": []
+		},
+		{
+			"name": "post/supplier",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n     \"name\": \"Mohammed izz\",\r\n     \"phone_number\":\"0599798898\"\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/supplier",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"supplier"
+					]
+				},
+				"description": "Create supplier"
+			},
+			"response": []
+		},
+		{
+			"name": "put/supplier/{id}",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n     \"name\": \"Mohammed izz\",\r\n     \"phone_number\":\"0599302245\"\r\n\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/supplier/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"supplier",
+						"4"
+					]
+				},
+				"description": "Update specific supplier"
+			},
+			"response": []
+		},
+		{
+			"name": "delete/supplier/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/supplier/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"supplier",
+						"1"
+					]
+				},
+				"description": "Delete supplier"
+			},
+			"response": []
+		},
+		{
+			"name": "get/wareHouse",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/wareHouse",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"wareHouse"
+					]
+				},
+				"description": "Retrieve all wareHouses"
+			},
+			"response": []
+		},
+		{
+			"name": "get/wareHouse/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/wareHouse/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"wareHouse",
+						"1"
+					]
+				},
+				"description": "Retreive specific wareHouse"
+			},
+			"response": []
+		},
+		{
+			"name": "post/wareHouse",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Salah Storage Store\",\r\n    \"address\":\"Birzeit\",\r\n    \"capacity\":3000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/wareHouse",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"wareHouse"
+					]
+				},
+				"description": "Create wareHouse"
+			},
+			"response": []
+		},
+		{
+			"name": "post/wareHouse/{id}",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Salah Storage Store\",\r\n    \"address\":\"Birzeit\",\r\n    \"capacity\":4000\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/wareHouse/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"wareHouse",
+						"1"
+					]
+				},
+				"description": "Update specific wareHouse"
+			},
+			"response": []
+		},
+		{
+			"name": "delete/wareHouse/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/wareHouse/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"wareHouse",
+						"4"
+					]
+				},
+				"description": "Delete a specifc wareHouse"
+			},
+			"response": []
+		},
+		{
+			"name": "get/order",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order"
+					]
+				},
+				"description": "Retrieve all orders"
+			},
+			"response": []
+		},
+		{
+			"name": "get/order/{id}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/order/4",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order",
+						"4"
+					]
+				},
+				"description": "Retrieve a specific order"
+			},
+			"response": []
+		},
+		{
+			"name": "post/order",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"date\": \"2024-05-13\",\r\n    \"status\": \"Pending\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/order",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order"
+					]
+				},
+				"description": "Create order"
+			},
+			"response": []
+		},
+		{
+			"name": "post/order/products",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"order_id\":5,\r\n    \"product_id\":1,\r\n    \"quantity_ordered\":20\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/order/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order",
+						"products"
+					]
+				},
+				"description": "Add products to order"
+			},
+			"response": []
+		},
+		{
+			"name": "get/order/{id}/products",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/order/3/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order",
+						"3",
+						"products"
+					]
+				},
+				"description": "Retrieve products for specific order"
+			},
+			"response": []
+		},
+		{
+			"name": "put/order/{id}",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"date\": \"2024-05-04\",\r\n    \"price\": 18.0,\r\n    \"status\": \"Delivered\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/order/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"order",
+						"3"
+					]
+				},
+				"description": "Update specific order"
+			},
+			"response": []
+		}
+	]
+}
